@@ -1,0 +1,14 @@
+SceneDiffuser++ Evaluation Results
+========================================
+
+js_agent_count: 0.533696
+wasserstein_spawns: 2495.850000
+wasserstein_despawns: 2511.150000
+js_speed: 0.483115
+collision_rate: 0.736120
+offroad_rate: 0.000000
+avg_traj_length_gen: 46.768359
+avg_traj_length_real: 73.685279
+traj_length_diff: 26.916920
+
+Overall Score: 4.444623
