@@ -550,8 +550,7 @@ def main():
     print(f"  • 7_comprehensive_paper_figure_200scenarios.png")
     print(f"  • LaTeX table code (displayed above)")
     print("=" * 80)
-    print("\n🎉 ALL DIAGRAMS READY FOR NEURIPS SUBMISSION!")
-    print("Scale: 200 scenarios with proper statistical backing")
+   
 
 if __name__ == "__main__":
     main()

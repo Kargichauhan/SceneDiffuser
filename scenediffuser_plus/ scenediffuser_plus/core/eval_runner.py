@@ -106,11 +106,12 @@ def _per_item_metrics(pred_xy: torch.Tensor, gt_xy: torch.Tensor, valid: torch.T
     pred_xy: [A,T,2], gt_xy: [A,T,2], valid: [A,T]
     returns: (CR%, ADE, FDE)
     """
-    dev = valid.device
-    if pred_xy.device != dev:
-        pred_xy = pred_xy.to(dev)
+    # >>> ensure index (from valid) and data (pred_xy) are on SAME device
+    dev = pred_xy.device
     if gt_xy.device != dev:
         gt_xy = gt_xy.to(dev)
+    if valid.device != dev:
+        valid = valid.to(dev)
 
     cr = pairwise_collision_rate(pred_xy, valid, radius=radius)
     ade, fde = ade_fde(pred_xy, gt_xy, valid)
